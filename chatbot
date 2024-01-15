@@ -1,0 +1,48 @@
+import java.util.ArrayList; 
+import java.util.Collections; 
+import java.util.Scanner; 
+
+public class Schoolchatbot {
+
+  public static void main(String[] args) throws InterruptedException{
+      
+            System.out.println("Hi, Welcome To STI COLLEGE CUBAO!"); 
+            Scanner scan = new Scanner(System.in);
+            System.out.print("What is your name? ");
+            String name = scan.nextLine();
+            Thread.sleep(300);
+
+         System.out.println("Nice to meet you " + name + ", Im the school administrator");
+         System.out.print("How are you today? ");
+         Thread.sleep(500);
+
+    String feeling = scan.nextLine();
+
+      if(feeling.equalsIgnoreCase(" good")){
+    
+       System.out.println("Wow! I feel the same way.");
+
+}
+      else if(feeling.equalsIgnoreCase("great")){ 
+              System.out.println("Thats nice to know!");
+}
+         else{
+         System.out.println("Go ahead and do something you love.");
+}
+           Thread.sleep(500);
+         System.out.println("Im giving you some questions. "); 
+            Thread.sleep(500);
+
+       System.out.print("What is your favorite color? ");
+                String color = scan.nextLine();
+
+      
+                
+         ArrayList colors = new ArrayList(); 
+          Collections.addAll(colors, "Orange ", " Yellow ", " Purple"); 
+             Collections.shuffle(colors);
+
+        Thread.sleep(500);
+          System.out.println(color + " ,Ohh nice color! by the way  Mine is " + colors.get(0) + ".");
+  }
+}
